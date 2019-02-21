@@ -1,0 +1,30 @@
+{
+  "name": "twin",
+  "version": "0.1.0",
+  "description": "more customized bootstrap modal. Inspired from bootbox",
+  "main": "twin.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhanyn10/twin.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "modal"
+  ],
+  "author": "Dhany Nurdiansyah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhanyn10/twin/issues"
+  },
+  "homepage": "https://github.com/dhanyn10/twin#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1"
+  }
+}
