@@ -1,6 +1,8 @@
 //default value
 var defaults = {
     id: 'modal-twin',
+    btn_className: 'btn btn-light',
+    btn_text: 'hello',
     mt_close: false
 }
 
@@ -36,11 +38,20 @@ var twin = function(val)
         </button>`;
     }
 
-    if(buttons.length > 0 && buttons.length %3 == 0)
+    if(Object.keys(buttons).length > 0)
     {
-        for(var i = 0; i < buttons.length; i+=3)
+        btnlen = Object.keys(buttons).length;
+        for(btnindex in buttons)
         {
-            htmlButtons += `<button class="btn `+ buttons[i] +`" onclick="`+ buttons[i+1] +`">`+ buttons[i+2] +`</button>`
+            className = buttons[btnindex]['className'];
+            if(className == "" || className == undefined)
+            {
+                className = defaults.btn_className;
+            }
+            btntext = buttons[btnindex]['text'];
+            if(btntext == "" || btntext == undefined)
+                btntext = defaults.btn_text;
+            htmlButtons += "<button class='"+ className +"'>" + btntext + "</button>";
         }
     }
     else
